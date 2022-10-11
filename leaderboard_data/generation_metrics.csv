@@ -1,0 +1,5 @@
+Metric,URL,Referenceless,Fluency Correlation,Semantic Similarity Correlation,Diversity Correlation,Overall Correlation
+Self-BLEU, ,Yes,-0.043,-0.319,0.638,0.491
+BERT-iBLEU,https://arxiv.org/abs/2010.12885,Yes,-0.036,-0.096,0.346,0.339
+BLEU,https://aclanthology.org/P02-1040/,No,0.212,0.209,-0.233,-0.091
+BERT-Score,https://arxiv.org/abs/1904.09675?context=cs,Yes,0.07,0.436,-0.744,-0.561

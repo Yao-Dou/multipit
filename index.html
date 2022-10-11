@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MultiPIT</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/papaparse.min.js"></script>
+    <script src="https://kit.fontawesome.com/c3b36ffc0c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="css/index.css"> 
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  </head>
+  <body class="sans-serif">
+    <header class="mt0 pa5 w-100 dt tc big-grad">
+      <div class="dtc v-mid">
+        <h2 class="f2-smaller fw3 mt0 mb0 white">8 topics, 100K+ data.</h2>
+        <h1 class="f-subheadline fw4 mb2 mt2 white">MultiPIT</h1>
+        <h2 class="f2-small fw3 mt0 white">Multi-Topic Paraphrases in Twitter</h2>
+      </div>
+    </header>
+    <section id="quick-info" class="bg-near-white pt4">
+      <div class="center lh-copy">
+          <div class="cf w-70 middle">
+              <div class="fl w-5 dib-ns pr0-ns">
+                &nbsp;
+              </div>
+              <div class="fl w-47 dib-ns pr4-m pr5-l mb4 pr2 pr0-ns ml0-ns">
+                  <p class="f5 f4-l fw6 tracked mv2">ABOUT</p>
+                  <span class="f7 f6-ns db black-70">
+                    MultiPIT is the largest Twitter-based paraphrase corpus to-date. It contains four parts: <span class="small-cap b">MultiPIT<sub>crowd</sub></span>, <span class="small-cap b">MultiPIT<sub>expert</sub></span>, <span class="small-cap b">MultiPIT<sub>Auto</sub></span>, <span class="small-cap b">MultiPIT<sub>NMR</sub></span>.
+                  </span>
+                  <span class="f7 f6-ns db black-70 mt1">
+                      <span class="small-cap b">MultiPIT<sub>crowd</sub></span> is a collection of crowdsourcing annoations with loosely defined paraphrase definitions.
+                  </span>
+                  <span class="f7 f6-ns db black-70 mt1">
+                    <span class="small-cap b">MultiPIT<sub>expert</sub></span> is a collection of expert annotations with strict defined paraphrase definitions.
+                  </span>
+                  <span class="f7 f6-ns db black-70 mt1">
+                    <span class="small-cap b">MultiPIT<sub>Auto</sub></span> is a collection of automatically identified paraphrases pairs from recent Twitter data.
+                  </span>
+                  <span class="f7 f6-ns db black-70 mt1">
+                    <span class="small-cap b">MultiPIT<sub>NMR</sub></span> is the first multi-reference test set for parpahrase generation.
+                  </span>
+              </div>
+
+              <div class="fl w-30 dib-ns pr4-m pr5-l mb4 pr2 pr0-ns ml4 ml0-ns">
+                  <p class="f5 f4-l fw6 tracked mv2">PAPER</p>
+                  <span class="f7 f6-ns db black-70">
+                    <a class="black-90 link customlink" href="https://arxiv.org/abs/2210.03235" target="_blank">
+                      Improving Large-scale Paraphrase Acquisition and Generation</span>
+                    </a>
+                  <span class="f7 f6-ns db black-70 i">EMNLP 2022</span>
+
+                  <p class="f5 f4-l fw6 tracked mb2 mt3-5">Authors</p>
+                  <div class="cf">
+                    <div class="fl mr3">
+                      <!-- include a profile picture -->
+                      <div class="f7 f6-ns db black-70 mb1">
+                        <div class="tc">
+                          <img src="author_imgs/yao.jpeg" class="br-100 h3 w3" title="Photo of a kitty staring at you">
+                        </div>
+                        <p class="tc mv0">
+                          <a class="black-90 link customlink" href="https://yao-dou.github.io/" target="_blank">
+                            Yao Dou
+                            </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="fl mr3">
+                      <div class="f7 f6-ns db black-70 mb1">
+                        <div class="tc">
+                          <img src="author_imgs/chao.jpeg" class="br-100 h3 w3" title="Photo of a kitty staring at you">
+                        </div>
+                        <p class="tc mv0">
+                          <a class="black-90 link customlink" href="https://chaojiang06.github.io/" target="_blank">
+                            Chao Jiang
+                            </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="fl">
+                      <div class="f7 f6-ns db black-70 mb1">
+                        <div class="tc">
+                          <img src="author_imgs/wei.png" class="br-100 h3 w3" title="Photo of a kitty staring at you">
+                        </div>
+                        <p class="tc mv0">
+                          <a class="black-90 link customlink" href="https://cocoxu.github.io/" target="_blank">
+                            Wei Xu
+                            </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="f7 f6-ns db black-70">from 
+                    <a class="black-90 link customlink" href="https://www.ic.gatech.edu/" target="_blank">
+                    Georgia Institute of Technology
+                    </a></span>
+              </div>
+
+              <div class="fl w-22 dib-ns mb4 pr2 pr0-ns ml4 ml0-ns">
+                  <p class="f5 f4-l fw6 tracked mv2">DATA <span class="f5 black-50">(available now)</span></p>
+                  <div>
+                    <span class="f7 f6-ns black-70 small-cap b">MultiPIT<sub>crowd</sub> </span>
+                    <a href="data/multipit_crowd.zip" download="multipit_crowd.zip"><i class="fa-regular fa-circle-down pointer black-70 grow crowd_download"></i></a>
+                  </div>
+                  
+                  <span class="f7 f6-ns db black-70 mb1">100K+ crowdsourcing annotations</span>
+
+                  <div>
+                    <span class="f7 f6-ns black-70 small-cap b">MultiPIT<sub>expert</sub> </span>
+                    <a href="data/multipit_expert.zip" download="multipit_expert.zip"><i class="fa-regular fa-circle-down pointer black-70 grow expert_download"></i></a>
+                  </div>
+
+                  <span class="f7 f6-ns db black-70 mb1">5K+ expert annotations</span>
+
+                  <div>
+                    <span class="f7 f6-ns black-70 small-cap b">MultiPIT<sub>Auto</sub> </span>
+                    <a href="data/multipit_auto.zip" download="multipit_auto.zip"><i class="fa-regular fa-circle-down pointer black-70 grow"></i></a>
+                  </div>
+                  <span class="f7 f6-ns db black-70 mb1">500K+ automatic annotations</span>
+
+                  <div>
+                    <span class="f7 f6-ns black-70 small-cap b">MultiPIT<sub>NMR</sub> </span>
+                    <a href="data/multipit_nmr.zip" download="multipit_nmr.zip"><i class="fa-regular fa-circle-down pointer black-70 grow nmr_download"></i></a>
+                  </div>
+                  <span class="f7 f6-ns db black-70 mb1">200 &#xd7 8 expert annotations</span>
+                  <!-- <a class="f6 f5-ns db fw6 pv3 black-70 link dim small-caps" href="">
+                      download
+                  </a> -->
+
+                  <p class="f5 f4-l fw6 tracked mb0 mt3">CODE <span class="f5 black-50">(coming soon...)</span></p>
+                  <!-- <i class="pointer fa-brands fa-github"></i>  -->
+                  <!-- <span class="f7 f6-ns db black-70">Code for data collection, model training and inference.</span> -->
+              </div>
+
+              <!-- <div class="fl w5 w-auto-l dib-ns mr4-m mr5-l mb4 pr2 pr0-ns ml4 ml0-ns">
+                  <p class="f5 f4-l fw6 tracked mt2">CODE</p>
+                  <span class="f7 f6-ns db black-70">Accompanies the paper</span>
+                  <span class="f7 f6-ns db black-70">Training, inference, analysis</span>
+                  <span class="f7 f6-ns db black-70 i">Python</span>
+                  <a class="f6 f5-ns db fw6 pv3 black-70 link dim small-caps" href="https://github.com/mbforbes/social-chemistry-101">
+                      view on github
+                  </a>
+              </div> -->
+          </div>
+      </div>
+    </section>
+    <section class="cf w-80 middle">
+      <div>
+        <div class="leaderboard-font fw4 mv4">Leaderboard</div>
+      </div>
+      <div class="ba b--black-20 br3 mb5">
+        <div class="cf bb b--black-20 ph3 bg-near-super-white br-top height-50px">
+          <a class="fl f5 fw5 black-40 mr4 pointer selected_leaderboard leaderboard-type" data-leaderboard-id="loose_iden_leaderboard">Loose Identification</a>
+          <a class="fl f5 fw5 black-40 mr4 pointer leaderboard-type" data-leaderboard-id="strict_iden_leaderboard">Strict Identification</a>
+          <a class="fl f5 fw5 black-40 mr4 pointer leaderboard-type" data-leaderboard-id="gen_leaderboard">Generation</a>
+          <a class="fl f5 fw5 black-40 pointer leaderboard-type" data-leaderboard-id="gen_metrics">Generation Metrics</a>
+
+          <a class="fr f5 fw3 line-height-50 blue submit-tip pointer link" href="instruction.html">Learn how to submit your own model or metric ›</a>
+        </div>
+        <div class="cf">
+          <div class="relative mt3 mh3 mb2">
+            <i emphasis="low" sizevalue="23px" class="material-icons absolute icon">search</i>
+            <input id="search-box" placeholder="Search leaderboard" aria-controls="crowd_leaderboard" aria-label="Search leaderboard" class="search-height search-padding cf border-box w-100 ba b--light-gray br5 tracked" value="">
+          </div>
+        </div>
+        <div id="loose_iden_leaderboard_div" class="ph3 mb4 leaderboard_div active">
+          <table id="loose_iden_leaderboard" class="nowrap hover">
+            <thead>
+                <tr>
+                    <th class="black-70">Rank</th>
+                    <th class="black-70">Model</th>
+                    <th class="black-70">Date</th>
+                    <th class="black-70">Precision</th>
+                    <th class="black-70">Recall</th>
+                    <th class="black-70">Accuracy</th>
+                    <th class="black-70">F1</th>
+                </tr>
+            </thead>
+            <!-- <tfoot>
+                <tr>
+                    <th>Rank</th>
+                    <th>Model</th>
+                    <th>Date</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>Accuracy</th>
+                    <th>F1</th>
+                </tr>
+            </tfoot> -->
+          </table>
+        </div>
+
+        <div id="strict_iden_leaderboard_div" class="ph3 mb4 leaderboard_div">
+          <table id="strict_iden_leaderboard" class="nowrap">
+            <thead>
+                <tr>
+                  <th class="black-70">Rank</th>
+                  <th class="black-70">Model</th>
+                  <th class="black-70">Date</th>
+                  <th class="black-70">Precision</th>
+                  <th class="black-70">Recall</th>
+                  <th class="black-70">Accuracy</th>
+                  <th class="black-70">F1</th>
+                </tr>
+            </thead>
+            <!-- <tfoot>
+                <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Date</th>
+                  <th>Precision</th>
+                  <th>Recall</th>
+                  <th>Accuracy</th>
+                  <th>F1</th>
+                </tr>
+            </tfoot> -->
+          </table>
+        </div>
+
+        <div id="gen_leaderboard_div" class="ph3 mb4 leaderboard_div">
+          <table id="gen_leaderboard" class="nowrap">
+            <thead>
+                <tr>
+                    <th class="black-70">Rank</th>
+                    <th class="black-70">Model</th>
+                    <th class="black-70">Date</th>
+                    <th class="black-70">BERT-iBLEU</th>
+                    <th class="black-70">Self-BLEU</th>
+                    <th class="black-70">BERT-Score</th>
+                    <th class="black-70">BLEU</th>
+                </tr>
+            </thead>
+            <!-- <tfoot>
+                <tr>
+                  <th>Rank</th>
+                  <th>Model</th>
+                  <th>Date</th>
+                  <th>BERT-iBLEU</th>
+                  <th>Self-BLEU</th>
+                  <th>BERT-Score</th>
+                  <th>BLEU</th>
+                </tr>
+            </tfoot> -->
+          </table>
+        </div>
+
+        <div id="gen_metrics_div" class="ph3 mb4 leaderboard_div">
+          <table id="gen_metrics" class="nowrap">
+            <thead>
+                <tr>
+                    <th class="black-70">Rank</th>
+                    <th class="black-70">Metric</th>
+                    <th class="black-70">Referenceless</th>
+                    <th class="black-70">Fluency Correlation</th>
+                    <th class="black-70">Semantic Similarity Correlation</th>
+                    <th class="black-70">Diversity Correlation</th>
+                    <th class="black-70">Overall Correlation</th>
+                </tr>
+            </thead>
+            <!-- <tfoot>
+                <tr>
+                  <th>Rank</th>
+                  <th>Metric</th>
+                  <th>Referenceless</th>
+                  <th>Fluency Correlation</th>
+                  <th>Semantic Similarity Correlation</th>
+                  <th>Diversity Correlation</th>
+                  <th>Overall Correlation</th>
+                </tr>
+            </tfoot> -->
+          </table>
+        </div>
+      </div>
+
+    </section>
+  </body>
+  <script type="text/javascript" src="js/index.js"></script>
+</html>

@@ -1,0 +1,7 @@
+Model,URL,Date,BLEU,Self-BLEU,BERT-Score,BERT-iBLEU
+T5-large,https://arxiv.org/abs/1910.10683,6/30/2022,41.14,33.34,85.86,77.79
+BART-large,https://arxiv.org/abs/1910.13461,6/30/2022,47.22,38.26,86.4,75.17
+GPT-2-large,https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf,6/30/2022,42.89,39.61,86.16,74.01
+T5-base,https://arxiv.org/abs/1910.10683,6/30/2022,42.1,46.43,87.75,72.29
+BART-base,https://arxiv.org/abs/1910.13461,6/30/2022,46.91,46.38,87.65,71.4
+GPT-2-small,https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf,6/30/2022,41.15,51.38,88.18,65.23

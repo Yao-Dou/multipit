@@ -1,0 +1,141 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.big-grad {
+	background: linear-gradient(314deg, #FF0080, #FF8C00, #40E0D0);
+	animation: diagonal-scroll 30s ease infinite;
+}
+
+.small-cap {
+	font-variant: small-caps;
+}
+
+.customlink:hover {
+	text-decoration: underline;
+	color: #357EDD;
+}
+
+.middle {
+	margin: auto;
+}
+
+.mh8 {
+	margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.br-top {
+	border-top-left-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
+}
+
+.w-39 {
+    width: 39%;
+}
+
+.w-74 {
+	width: 74%;
+}
+
+.icon {
+	left: 15px;
+	top: 14px;
+}
+
+.search-height {
+	height: 50px;
+}
+
+.mv3-new {
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+}
+
+.search-padding{
+	padding-left: 50px;
+}
+
+.br5 {
+    border-radius: 40px;
+}
+
+.leaderboard-type {
+	height: 50px;
+	line-height: 50px;
+}
+
+.line-height-50 {
+	height: 50px;
+	line-height: 50px;
+}
+
+.line-height-70 {
+	height: 70px;
+	line-height: 70px;
+}
+
+.leaderboard-type:hover {
+	/* text-decoration: underline; */
+	color: #FB8E0B;
+	/* bottom border */
+	border-bottom: 3px solid #FB8E0B;
+}
+
+.selected_leaderboard {
+	color: #FB8E0B;
+	border-bottom: 3px solid #FB8E0B;
+}
+
+.height-50px {
+	height: 50px;
+}
+
+.height-70px {
+	height: 70px;
+}
+
+.submit-tip:hover {
+	text-decoration: underline;
+}
+
+.leaderboard_div {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+tr { height: 55px}
+
+.leaderboard-font {
+	font-size: 2rem;
+}
+
+.bg-near-super-white {
+	background: #f9f9f9;
+}
+
+.f2-small {
+	font-size: 1.95rem;
+}
+.f2-smaller {
+	font-size: 1.75rem;
+}
+
+.mt3-5 {
+	margin-top: 1.6rem;
+}
+
+.w-48 {
+	width: 48%;
+}
+
+.w-47 {
+	width: 47%;
+}
+
+.w-22 {
+	width: 22%;
+}
